@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipkart Clone</title>
+
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--HEADER -->
+    <header>
+      <!--  MOBILE HEADER  -->
+      <div class="bg-white shadow-sm sticky-top d-lg-none">
+        <div
+          class="d-flex justify-content-between align-items-center px-3 py-2"
+        >
+          <button
+            class="btn p-0 border-0"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileNav"
+          >
+            <i class="bi bi-list fs-3"></i>
+          </button>
+
+          <img src="img/flipkartlogo.svg" alt="Flipkart" height="26" />
+
+          <div class="d-flex gap-3">
+            <a href="#" class="text-dark"
+              ><i class="bi bi-person-circle fs-5"></i
+            ></a>
+            <a href="#" class="text-dark"><i class="bi bi-cart3 fs-5"></i></a>
+          </div>
+        </div>
+
+        <form class="px-3 pb-2">
+          <div class="input-group">
+            <span class="input-group-text bg-transparent border-end-0"
+              ><i class="bi bi-search"></i
+            ></span>
+            <input
+              class="form-control border-start-0 mobile-search"
+              placeholder="Search for Products"
+            />
+          </div>
+        </form>
+      </div>
+
+      <!--  DESKTOP NAVBAR -->
+      <nav
+        class="navbar navbar-expand-lg bg-white shadow-sm px-4 py-2 sticky-top d-none d-lg-flex"
+      >
+        <div class="container-fluid align-items-center">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="img/flipkartlogo.svg" alt="Flipkart" height="35" />
+          </a>
+          <form class="d-flex mx-3 flex-grow-1" style="max-width: 600px">
+            <div class="input-group w-100">
+              <button class="btn btn-search" type="submit">
+                <img src="img/searchicon.svg" alt="Search" height="20" />
+              </button>
+              <input
+                type="text"
+                class="form-control search-input"
+                placeholder="Search for Products, Brands and More"
+                aria-label="Search"
+              />
+            </div>
+          </form>
+          <ul class="navbar-nav d-flex flex-row align-items-center gap-3 mb-0">
+            <li class="nav-item dropdown login-hover">
+              <a
+                class="nav-link dropdown-toggle d-flex align-items-center px-2 py-1 rounded"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                <img
+                  src="img/login.svg"
+                  alt="Login Icon"
+                  height="20"
+                  class="me-1"
+                />
+                Login
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">My Profile</a></li>
+                <li><a class="dropdown-item" href="#">Orders</a></li>
+                <li><a class="dropdown-item" href="#">Wishlist</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="#">
+                <img src="img/cart.svg" alt="Cart" height="20" class="me-1" />
+                Cart
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="#">
+                <img
+                  src="img/become seller.svg"
+                  alt="Become a Seller"
+                  height="20"
+                  class="me-1"
+                />
+                Become a Seller
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle d-flex align-items-center"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                <img src="img/moreicon.svg" alt="More" height="20" />
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Notification Preferences</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">24x7 Customer Care</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- MOBILE  MENU  -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileNav">
+        <div class="offcanvas-header">
+          <h6 class="offcanvas-title fw-semibold">
+            <i class="bi bi-person-circle me-2"></i>Login & Signup
+          </h6>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+          ></button>
+        </div>
+        <div class="offcanvas-body p-0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <i class="bi bi-stars me-2"></i>SuperCoin Zone
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-gem me-2"></i>Flipkart Plus Zone
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-grid me-2"></i>All Categories
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-info-circle me-2"></i>More on Flipkart
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-translate me-2"></i>Choose Language
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-tag me-2"></i>Offer Zone
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-shop me-2"></i>Sell on Flipkart
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-box-seam me-2"></i>My Orders
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-percent me-2"></i>Coupons
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-cart me-2"></i>My Cart
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-heart me-2"></i>My Wishlist
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-person me-2"></i>My Account
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-bell me-2"></i>My Notifications
+            </li>
+            <li class="list-group-item border-top mt-2">Help Centre</li>
+            <li class="list-group-item">Legal</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!--  CATEGORY BAR  -->
+    <section class="category-bar bg-white shadow-sm mx-3 mt-3 py-2 rounded-2">
+      <div class="d-flex px-2 text-center category-wrapper">
+        <!--  category -->
+        <div class="category-item">
+          <img src="img/grocery.png" alt="Grocery" />
+          <div class="category-text">Grocery</div>
+        </div>
+        <div class="category-item">
+          <img src="img/mobiles.png" alt="Mobiles" />
+          <div class="category-text">Mobiles</div>
+        </div>
+        <div class="category-item">
+          <img src="img/fashion.png" alt="Fashion" />
+          <div class="category-text">
+            Fashion <i class="bi bi-caret-down-fill"></i>
+          </div>
+        </div>
+        <div class="category-item">
+          <img src="img/electronics.png" alt="Electronics" />
+          <div class="category-text">
+            Electronics <i class="bi bi-caret-down-fill"></i>
+          </div>
+        </div>
+        <div class="category-item">
+          <img src="img/furniture.png" alt="Furniture" />
+          <div class="category-text">
+            Home & Furniture <i class="bi bi-caret-down-fill"></i>
+          </div>
+        </div>
+        <div class="category-item">
+          <img src="img/appliances.png" alt="Appliances" />
+          <div class="category-text">Appliances</div>
+        </div>
+        <div class="category-item">
+          <img src="img/flights.png" alt="Flights" />
+          <div class="category-text">Flights</div>
+        </div>
+        <div class="category-item">
+          <img src="img/toys.png" alt="Toys" />
+          <div class="category-text">
+            Beauty, Toys & More <i class="bi bi-caret-down-fill"></i>
+          </div>
+        </div>
+        <div class="category-item">
+          <img src="img/automobile.png" alt="Automobile" />
+          <div class="category-text">
+            Two Wheelers <i class="bi bi-caret-down-fill"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER CAROUSEL  -->
+    <section class="mx-3 mt-3 rounded-2 overflow-hidden shadow-sm">
+      <div
+        id="flipkartCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="4000"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#flipkartCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#flipkartCarousel"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#flipkartCarousel"
+            data-bs-slide-to="2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#flipkartCarousel"
+            data-bs-slide-to="3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#flipkartCarousel"
+            data-bs-slide-to="4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#flipkartCarousel"
+            data-bs-slide-to="5"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/banner1.jpg" class="d-block w-100" alt="Banner 1" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner2.jpg" class="d-block w-100" alt="Banner 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner3.jpg" class="d-block w-100" alt="Banner 3" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner4.jpg" class="d-block w-100" alt="Banner 4" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner5.jpg" class="d-block w-100" alt="Banner 5" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner6.jpg" class="d-block w-100" alt="Banner 6" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#flipkartCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#flipkartCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </section>
+
+    <!--   hero section -->
+
+    <section class="product-section bg-white shadow-sm rounded-2 p-3 mx-3 mt-3">
+      <h5 class="fw-semibold mb-3 px-1">Best of Electronics</h5>
+      <div class="d-flex overflow-auto gap-4 px-2 hero-scroll">
+        <div class="text-center hero-card">
+          <img src="img/electronics1.jpeg" alt="Monitors" />
+          <div class="fw-normal mt-1">earbuds</div>
+          <div class="fw-semibold text-success">From ₹7949</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics2.jpeg" alt="Gaming Keyboards" />
+          <div class="fw-normal mt-1">lights</div>
+          <div class="fw-semibold text-success">From ₹999</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics3.jpeg" alt="Power Banks" />
+          <div class="fw-normal mt-1">Trimmers</div>
+          <div class="fw-semibold text-success">Upto 70% Off</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics4.jpeg" alt="Printers" />
+          <div class="fw-normal mt-1">cameras</div>
+          <div class="fw-semibold text-success">From ₹3999</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics5.jpeg" alt="Trimmers" />
+          <div class="fw-normal mt-1">Monitors</div>
+          <div class="fw-semibold text-success">From ₹399</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics5.jpeg" alt="Trimmers" />
+          <div class="fw-normal mt-1">Monitors</div>
+          <div class="fw-semibold text-success">From ₹399</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics5.jpeg" alt="Trimmers" />
+          <div class="fw-normal mt-1">Monitors</div>
+          <div class="fw-semibold text-success">From ₹399</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- her section 2 -->
+    <section class="product-section bg-white shadow-sm rounded-2 p-3 mx-3 mt-3">
+      <h5 class="fw-semibold mb-3 px-1">Beauty,toys,food & More</h5>
+      <div class="d-flex overflow-auto gap-4 px-2 hero-scroll">
+        <div class="text-center hero-card">
+          <img src="img/electronics1.jpeg" alt="Monitors" />
+          <div class="fw-normal mt-1">earbuds</div>
+          <div class="fw-semibold text-success">From ₹7949</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics2.jpeg" alt="Gaming Keyboards" />
+          <div class="fw-normal mt-1">lights</div>
+          <div class="fw-semibold text-success">From ₹999</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics3.jpeg" alt="Power Banks" />
+          <div class="fw-normal mt-1">Trimmers</div>
+          <div class="fw-semibold text-success">Upto 70% Off</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics4.jpeg" alt="Printers" />
+          <div class="fw-normal mt-1">cameras</div>
+          <div class="fw-semibold text-success">From ₹3999</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics5.jpeg" alt="Trimmers" />
+          <div class="fw-normal mt-1">Monitors</div>
+          <div class="fw-semibold text-success">From ₹399</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics5.jpeg" alt="Trimmers" />
+          <div class="fw-normal mt-1">Monitors</div>
+          <div class="fw-semibold text-success">From ₹399</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics5.jpeg" alt="Trimmers" />
+          <div class="fw-normal mt-1">Monitors</div>
+          <div class="fw-semibold text-success">From ₹399</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- hero section 3 -->
+    <section class="product-section bg-white shadow-sm rounded-2 p-3 mx-3 mt-3">
+      <h5 class="fw-semibold mb-3 px-1">sports,healthcare & More</h5>
+      <div class="d-flex overflow-auto gap-4 px-2 hero-scroll">
+        <div class="text-center hero-card">
+          <img src="img/electronics1.jpeg" alt="Monitors" />
+          <div class="fw-normal mt-1">earbuds</div>
+          <div class="fw-semibold text-success">From ₹7949</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics2.jpeg" alt="Gaming Keyboards" />
+          <div class="fw-normal mt-1">lights</div>
+          <div class="fw-semibold text-success">From ₹999</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics3.jpeg" alt="Power Banks" />
+          <div class="fw-normal mt-1">Trimmers</div>
+          <div class="fw-semibold text-success">Upto 70% Off</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics4.jpeg" alt="Printers" />
+          <div class="fw-normal mt-1">cameras</div>
+          <div class="fw-semibold text-success">From ₹3999</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics5.jpeg" alt="Trimmers" />
+          <div class="fw-normal mt-1">Monitors</div>
+          <div class="fw-semibold text-success">From ₹399</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics5.jpeg" alt="Trimmers" />
+          <div class="fw-normal mt-1">Monitors</div>
+          <div class="fw-semibold text-success">From ₹399</div>
+        </div>
+
+        <div class="text-center hero-card">
+          <img src="img/electronics5.jpeg" alt="Trimmers" />
+          <div class="fw-normal mt-1">Monitors</div>
+          <div class="fw-semibold text-success">From ₹399</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- product grid  -->
+
+    <section class="container-fluid mt-4 px-3">
+      <div class="row g-3">
+        <!-- Fashion's Top Deals -->
+        <div class="col-md-4">
+          <div class="bg-white shadow-sm rounded-2 p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="fw-semibold mb-0">Fashion's Top Deals</h5>
+              <i class="bi bi-arrow-right-circle-fill text-primary"></i>
+            </div>
+            <div class="row g-2">
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img
+                    src="img/fashion.jpeg"
+                    class="img-fluid"
+                    alt="Flip Flops"
+                  />
+                  <div class="small mt-2">Men’s Slippers & Flip Flops</div>
+                  <div class="text-success small fw-semibold">Min. 70% Off</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img
+                    src="img/fashion.jpeg"
+                    class="img-fluid"
+                    alt="Backpacks"
+                  />
+                  <div class="small mt-2">Backpacks</div>
+                  <div class="text-success small fw-semibold">Min. 70% Off</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img src="img/fashion.jpeg" class="img-fluid" alt="Boxers" />
+                  <div class="small mt-2">Men's Boxers</div>
+                  <div class="text-success small fw-semibold">Min. 50% Off</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img src="img/fashion.jpeg" class="img-fluid" alt="Shoes" />
+                  <div class="small mt-2">Men’s Casual Shoes</div>
+                  <div class="text-success small fw-semibold">Min. 70% Off</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Season's Top Picks -->
+        <div class="col-md-4">
+          <div class="bg-white shadow-sm rounded-2 p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="fw-semibold mb-0">Season’s Top Picks</h5>
+              <i class="bi bi-arrow-right-circle-fill text-primary"></i>
+            </div>
+            <div class="row g-2">
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img src="img/season.jpeg" class="img-fluid" alt="Sarees" />
+                  <div class="small mt-2">Women's Sarees</div>
+                  <div class="text-success small fw-semibold">
+                    Special offer
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img src="img/season.jpeg" class="img-fluid" alt="Shirts" />
+                  <div class="small mt-2">Casual Shirts</div>
+                  <div class="text-success small fw-semibold">Big Savings</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img src="img/season.jpeg" class="img-fluid" alt="Nuts" />
+                  <div class="small mt-2">Dry Fruit, Nut & Seed</div>
+                  <div class="text-success small fw-semibold">Min. 50% Off</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img
+                    src="img/season.jpeg"
+                    class="img-fluid"
+                    alt="Arm Sleeves"
+                  />
+                  <div class="small mt-2">Arm Sleeves</div>
+                  <div class="text-success small fw-semibold">Min. 50% Off</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Home Decor & Furnishings -->
+        <div class="col-md-4">
+          <div class="bg-white shadow-sm rounded-2 p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="fw-semibold mb-0">Home Decor & Furnishings</h5>
+              <i class="bi bi-arrow-right-circle-fill text-primary"></i>
+            </div>
+            <div class="row g-2">
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img
+                    src="img/homedecor.jpeg"
+                    class="img-fluid"
+                    alt="Wall Clocks"
+                  />
+                  <div class="small mt-2">Wall Clocks</div>
+                  <div class="text-success small fw-semibold">Min. 50% Off</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img src="img/homedecor.jpeg" class="img-fluid" alt="Bulbs" />
+                  <div class="small mt-2">Bulbs</div>
+                  <div class="text-success small fw-semibold">Min. 50% Off</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img
+                    src="img/homedecor.jpeg"
+                    class="img-fluid"
+                    alt="Torches"
+                  />
+                  <div class="small mt-2">Torches</div>
+                  <div class="text-success small fw-semibold">Most-loved</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img
+                    src="img/homedecor.jpeg"
+                    class="img-fluid"
+                    alt="Mosquito Nets"
+                  />
+                  <div class="small mt-2">Mosquito Nets</div>
+                  <div class="text-success small fw-semibold">
+                    Special offer
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- product grid   2  -->
+
+    <section class="container-fluid mt-4 px-3">
+      <div class="row g-3">
+        <!-- trending gadgets -->
+        <div class="col-md-4">
+          <div class="bg-white shadow-sm rounded-2 p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="fw-semibold mb-0">Trending gadgets and electronics</h5>
+              <i class="bi bi-arrow-right-circle-fill text-primary"></i>
+            </div>
+            <div class="row g-2">
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img
+                    src="img/trending.jpeg"
+                    class="img-fluid"
+                    alt="Flip Flops"
+                  />
+                  <div class="small mt-2">speakers</div>
+                  <div class="text-success small fw-semibold">Min. 70% Off</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img
+                    src="img/trending2.jpeg"
+                    class="img-fluid"
+                    alt="Backpacks"
+                  />
+                  <div class="small mt-2">drones</div>
+                  <div class="text-success small fw-semibold">Min. 70% Off</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img src="img/trending.jpeg" class="img-fluid" alt="Boxers" />
+                  <div class="small mt-2">speakers</div>
+                  <div class="text-success small fw-semibold">Min. 50% Off</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img src="img/trending2.jpeg" class="img-fluid" alt="Shoes" />
+                  <div class="small mt-2">drones</div>
+                  <div class="text-success small fw-semibold">Min. 70% Off</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--bauty and wellness -->
+        <div class="col-md-4">
+          <div class="bg-white shadow-sm rounded-2 p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="fw-semibold mb-0">beauty and wellness</h5>
+              <i class="bi bi-arrow-right-circle-fill text-primary"></i>
+            </div>
+            <div class="row g-2">
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img src="img/wellness.jpeg" class="img-fluid" alt="Sarees" />
+                  <div class="small mt-2">dry fruits</div>
+                  <div class="text-success small fw-semibold">
+                    Special offer
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img src="img/wellness.jpeg" class="img-fluid" alt="Shirts" />
+                  <div class="small mt-2">dry fruits</div>
+                  <div class="text-success small fw-semibold">Big Savings</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img src="img/wellness.jpeg" class="img-fluid" alt="Nuts" />
+                  <div class="small mt-2">Dry Fruit, Nut & Seed</div>
+                  <div class="text-success small fw-semibold">Min. 50% Off</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img
+                    src="img/wellness.jpeg"
+                    class="img-fluid"
+                    alt="Arm Sleeves"
+                  />
+                  <div class="small mt-2">dry fruits</div>
+                  <div class="text-success small fw-semibold">Min. 50% Off</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Home Decor & Furnishings -->
+        <div class="col-md-4">
+          <div class="bg-white shadow-sm rounded-2 p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="fw-semibold mb-0">make your home stylish</h5>
+              <i class="bi bi-arrow-right-circle-fill text-primary"></i>
+            </div>
+            <div class="row g-2">
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img
+                    src="img/table.jpeg"
+                    class="img-fluid"
+                    alt="Wall Clocks"
+                  />
+                  <div class="small mt-2">Shoes rack</div>
+                  <div class="text-success small fw-semibold">Min. 50% Off</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img src="img/bed.jpeg" class="img-fluid" alt="Bulbs" />
+                  <div class="small mt-2">tables</div>
+                  <div class="text-success small fw-semibold">Min. 50% Off</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img src="img/table.jpeg" class="img-fluid" alt="Torches" />
+                  <div class="small mt-2">curtains</div>
+                  <div class="text-success small fw-semibold">Most-loved</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="product-tile border rounded-2 p-2 text-center">
+                  <img
+                    src="img/table.jpeg"
+                    class="img-fluid"
+                    alt="Mosquito Nets"
+                  />
+                  <div class="small mt-2">Mosquito Nets</div>
+                  <div class="text-success small fw-semibold">
+                    Special offer
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Deals Section -->
+    <section class="product-section bg-white shadow-sm rounded-2 p-3 mx-3 mt-3">
+      <h5 class="fw-semibold mb-3 px-1">Top Deals</h5>
+      <div class="d-flex overflow-auto gap-4 px-2 hero-scroll">
+        <div class="text-center hero-card">
+          <img src="img/topdeals.jpeg" alt="Apple iPads" />
+          <div class="fw-normal mt-1">Apple iPads</div>
+          <div class="fw-semibold text-primary">Shop Now!</div>
+        </div>
+        <div class="text-center hero-card">
+          <img src="img/topdeals2.jpeg" alt="Buy Now" />
+          <div class="fw-normal mt-1">Buy Now</div>
+          <div class="fw-semibold text-success">From ₹99</div>
+        </div>
+        <div class="text-center hero-card">
+          <img src="img/topdeals3.jpeg" alt="Camera Bags" />
+          <div class="fw-normal mt-1">Camera Bags</div>
+          <div class="fw-semibold text-success">Min 50% Off</div>
+        </div>
+        <div class="text-center hero-card">
+          <img src="img/topdeals.jpeg" alt="Allen Solly" />
+          <div class="fw-normal mt-1">Allen Solly & Van Heusen</div>
+          <div class="fw-semibold text-success">Min. 40% Off</div>
+        </div>
+        <div class="text-center hero-card">
+          <img src="img/topdeals9.jpeg" alt="Instax Cameras" />
+          <div class="fw-normal mt-1">Instax Cameras</div>
+          <div class="fw-semibold text-success">From ₹3,999</div>
+        </div>
+        <div class="text-center hero-card">
+          <img src="img/topdeals5.jpeg" alt="Grab Now" />
+          <div class="fw-normal mt-1">Grab Now</div>
+          <div class="fw-semibold text-success">From ₹49</div>
+        </div>
+        <div class="text-center hero-card">
+          <img src="img/topdeals7.jpeg" alt="Apple Pencil" />
+          <div class="fw-normal mt-1">Apple Pencil</div>
+          <div class="fw-semibold text-primary">Shop Now</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Books, Toys & More Section -->
+    <section class="product-section bg-white shadow-sm rounded-2 p-3 mx-3 mt-3">
+      <h5 class="fw-semibold mb-3 px-1">Books, Toys & More</h5>
+      <div class="d-flex overflow-auto gap-4 px-2 hero-scroll">
+        <div class="text-center hero-card">
+          <img src="img/topdeals8.jpeg" alt="Helmet" />
+          <div class="fw-normal mt-1">Helmet</div>
+          <div class="fw-semibold text-success">From ₹699</div>
+        </div>
+        <div class="text-center hero-card">
+          <img src="img/topdeals5.jpeg" alt="Bike Light Bulb" />
+          <div class="fw-normal mt-1">Bike Light Bulb</div>
+          <div class="fw-semibold text-success">From ₹89</div>
+        </div>
+        <div class="text-center hero-card">
+          <img src="img/topdeals4.jpeg" alt="Car Air Freshener" />
+          <div class="fw-normal mt-1">Car Air Freshener</div>
+          <div class="fw-semibold text-success">From ₹199</div>
+        </div>
+        <div class="text-center hero-card">
+          <img src="img/topdeals9.jpeg" alt="Car Light Bulb" />
+          <div class="fw-normal mt-1">Car Light Bulb</div>
+          <div class="fw-semibold text-success">Upto 70% Off</div>
+        </div>
+        <div class="text-center hero-card">
+          <img src="img/topdeals.jpeg" alt="Bike Body Cover" />
+          <div class="fw-normal mt-1">Bike Body Cover</div>
+          <div class="fw-semibold text-success">From ₹199</div>
+        </div>
+        <div class="text-center hero-card">
+          <img src="img/topdeals6.jpeg" alt="Car Sticker" />
+          <div class="fw-normal mt-1">Car Sticker And Decal</div>
+          <div class="fw-semibold text-success">Upto 70% Off</div>
+        </div>
+        <div class="text-center hero-card">
+          <img src="img/topdeals4.jpeg" alt="Musical Toys" />
+          <div class="fw-normal mt-1">Musical Toys</div>
+          <div class="fw-semibold text-success">Under 199</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="flipkart-footer text-white mt-5 pt-5">
+      <div class="container-fluid px-4">
+        <div class="row row-cols-2 row-cols-md-5 g-3">
+          <div>
+            <h6 class="footer-title">ABOUT</h6>
+            <ul class="footer-links">
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Flipkart Stories</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Corporate Information</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="footer-title">GROUP COMPANIES</h6>
+            <ul class="footer-links">
+              <li><a href="#">Myntra</a></li>
+              <li><a href="#">Cleartrip</a></li>
+              <li><a href="#">Shopsy</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="footer-title">HELP</h6>
+            <ul class="footer-links">
+              <li><a href="#">Payments</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Cancellation & Returns</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="footer-title">CONSUMER POLICY</h6>
+            <ul class="footer-links">
+              <li><a href="#">Cancellation & Returns</a></li>
+              <li><a href="#">Terms Of Use</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Sitemap</a></li>
+              <li><a href="#">Grievance Redressal</a></li>
+              <li><a href="#">EPR Compliance</a></li>
+            </ul>
+          </div>
+          <div class="contact-col">
+            <h6 class="footer-title">Mail Us:</h6>
+            <p>
+              Flipkart Internet Private Limited, <br />
+              Buildings Alyssa, Begonia & <br />
+              Clove Embassy Tech Village, <br />
+              Outer Ring Road, Devarabeesanahalli Village, <br />
+              Bengaluru, 560103, <br />
+              Karnataka, India
+            </p>
+            <div class="social-icons mt-3">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="bg-secondary my-4" />
+
+        <div class="text-center text-secondary pb-3 small">
+          &copy; 2025 Flipkart Clone • Built with ❤️ by OM kasana (HTML:5,
+          Bootstrap-CSS)
+        </div>
+      </div>
+    </footer>
+
+    <!-- linked js -->
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
